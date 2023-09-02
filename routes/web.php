@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewController
+use App\Http\Controllers\NewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +21,6 @@ Route::get('/', function () {
 });
 
 Route::get('get',[NewController::class,"index"]);
+Route::get('get/{id}',function($id){
+    return view('routing',["id"=> $id,"data"=>""]);
+});
